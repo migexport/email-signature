@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="@leniejoicem" />
+    <title>Email Signature Generator</title>
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="https://scontent.fmnl17-7.fna.fbcdn.net/v/t39.30808-6/342199511_952131782486349_8794950428596335166_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=2-1kLnH9-bcQ7kNvwHdA5Tr&_nc_oc=AdkFTW0tOcuVi0Z66beS2iwqv4D7---fAJ4XAGGx-4Fac0uhEkYio6YhTryHtTys94Y&_nc_zt=23&_nc_ht=scontent.fmnl17-7.fna&_nc_gid=RtkqWgLmtDZ7EC9OYb-2Tw&oh=00_AfrPbTf5ua24-rCpcnnPO5bJCuioWFit-rK0EUVvJX5_aA&oe=696D186C"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="h-full">
+    <div id="app" class="h-full w-full bg-white overflow-auto">
+      <div class="min-h-full w-full p-6 md:p-10">
+        <!-- Header -->
+        <div class="text-center mb-8">
+          <div class="inline-flex flex-col items-center gap-3 mb-3">
+            <img
+              src="https://48430198.fs1.hubspotusercontent-na1.net/hubfs/48430198/Meridian-International-Sourcing-Group-logo-final-file-2.jpg"
+              alt="Meridian International Sourcing Group"
+              style="height: 60px; width: auto; object-fit: contain"
+              onerror="this.style.display='none'; this.alt='Logo failed to load';"
+            />
+            <h1
+              id="app-title"
+              class="text-2xl md:text-3xl font-bold"
+              style="color: #1136a5"
+            >
+              Email Signature Generator
+            </h1>
+          </div>
+          <p id="subtitle" class="text-slate-600">
+            Create professional signatures for HubSpot &amp; Outlook
+          </p>
+        </div>
+        <!-- Two-column layout: Form + Preview/Code -->
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
+          <!-- Form Section -->
+          <div
+            class="bg-white rounded-2xl p-6 md:p-8 border-2"
+            style="border-color: #70d2db"
+          >
+            <h2
+              class="text-lg font-semibold mb-6 flex items-center gap-2"
+              style="color: #1136a5"
+            >
+              <svg width="20" height="20" viewbox="0 0 20 20" fill="none">
+                <circle
+                  cx="10"
+                  cy="6"
+                  r="4"
+                  stroke="#1136A5"
+                  stroke-width="2"
+                />
+                <path
+                  d="M3 18c0-3.866 3.134-7 7-7s7 3.134 7 7"
+                  stroke="#1136A5"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              Your Details
+            </h2>
+            <div class="space-y-5">
+              <!-- Name -->
+              <div>
+                <label
+                  for="fullName"
+                  class="block text-sm font-medium mb-2"
+                  style="color: #1a1a1a"
+                  >Full Name *</label
+                >
+                <input
+                  type="text"
+                  id="fullName"
+                  placeholder="John Smith"
+                  class="w-full px-4 py-3 bg-white border-2 rounded-xl placeholder-slate-400 transition-all"
+                  style="border-color: #70d2db; color: #1a1a1a"
+                />
+              </div>
+              <!-- Job Title -->
+              <div>
+                <label
+                  for="title"
+                  class="block text-sm font-medium mb-2"
+                  style="color: #1a1a1a"
+                  >Job Title *</label
+                >
+                <input
+                  type="text"
+                  id="title"
+                  placeholder="Marketing Manager"
+                  class="w-full px-4 py-3 bg-white border-2 rounded-xl placeholder-slate-400 transition-all"
+                  style="border-color: #70d2db; color: #1a1a1a"
+                />
+              </div>
+              <!-- Email -->
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium mb-2"
+                  style="color: #1a1a1a"
+                  >Email *</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="john@migexport.com"
+                  class="w-full px-4 py-3 bg-white border-2 rounded-xl placeholder-slate-400 transition-all"
+                  style="border-color: #70d2db; color: #1a1a1a"
+                />
+              </div>
+              <!-- Phone -->
+              <div>
+                <label
+                  for="phone"
+                  class="block text-sm font-medium mb-2"
+                  style="color: #1a1a1a"
+                  >Phone *</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="+1 (555) 123-4567"
+                  class="w-full px-4 py-3 bg-white border-2 rounded-xl placeholder-slate-400 transition-all"
+                  style="border-color: #70d2db; color: #1a1a1a"
+                />
+              </div>
+              <!-- WhatsApp -->
+              <div>
+                <label
+                  for="whatsappUrl"
+                  class="block text-sm font-medium mb-2"
+                  style="color: #1a1a1a"
+                  >WhatsApp URL *</label
+                >
+                <input
+                  type="url"
+                  id="whatsappUrl"
+                  placeholder="https://wa.me/639773390618"
+                  class="w-full px-4 py-3 bg-white border-2 rounded-xl placeholder-slate-400 transition-all"
+                  style="border-color: #70d2db; color: #1a1a1a"
+                />
+              </div>
+              <!-- Meeting URL -->
+              <div>
+                <label
+                  for="meetingUrl"
+                  class="block text-sm font-medium mb-2"
+                  style="color: #1a1a1a"
+                  >Meeting URL
+                  <span style="color: #999; font-size: 12px"
+                    >(optional)</span
+                  ></label
+                >
+                <input
+                  type="url"
+                  id="meetingUrl"
+                  placeholder="https://outlook.office.com/book/..."
+                  class="w-full px-4 py-3 bg-white border-2 rounded-xl placeholder-slate-400 transition-all"
+                  style="border-color: #70d2db; color: #1a1a1a"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Preview & Code Section -->
+          <div class="space-y-4">
+            <!-- Preview -->
+            <div
+              class="bg-white rounded-2xl p-4 border-2"
+              style="border-color: #70d2db"
+            >
+              <h2
+                class="text-base font-semibold mb-3 flex items-center gap-2"
+                style="color: #1136a5"
+              >
+                <svg width="18" height="18" viewbox="0 0 20 20" fill="none">
+                  <rect
+                    x="2"
+                    y="4"
+                    width="16"
+                    height="12"
+                    rx="2"
+                    stroke="#1136A5"
+                    stroke-width="2"
+                  />
+                  <path d="M2 7l8 5 8-5" stroke="#1136A5" stroke-width="2" />
+                </svg>
+                Live Preview
+              </h2>
+              <div id="preview" class="signature-preview"></div>
+            </div>
+            <!-- HTML Code Viewer -->
+            <div
+              class="bg-white rounded-2xl p-4 border-2"
+              style="border-color: #70d2db"
+            >
+              <div class="flex items-center justify-between mb-3">
+                <h3
+                  class="text-base font-semibold flex items-center gap-2"
+                  style="color: #1136a5"
+                >
+                  <svg width="16" height="16" viewbox="0 0 16 16" fill="none">
+                    <path
+                      d="M5 11L2 8l3-3M11 5l3 3-3 3M9 2L7 14"
+                      stroke="#1136A5"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  HTML Code
+                </h3>
+                <div class="flex gap-2">
+                  <button
+                    id="copyMiniBtn"
+                    class="px-3 py-1.5 text-xs font-medium text-white rounded-lg transition-all"
+                    style="background-color: #70d2db"
+                  >
+                    Copy HTML
+                  </button>
+                  <button
+                    id="downloadHtmlBtn"
+                    class="px-3 py-1.5 text-xs font-medium text-white rounded-lg transition-all"
+                    style="background-color: #1136a5"
+                  >
+                    Download
+                  </button>
+                </div>
+              </div>
+              <div id="htmlCodeViewer" class="code-viewer"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- How to Use Section -->
+        <div class="max-w-6xl mx-auto mt-8">
+          <div
+            class="bg-white rounded-2xl p-8 border-2"
+            style="border-color: #70d2db"
+          >
+            <h2
+              class="text-2xl font-bold mb-8 flex items-center gap-3"
+              style="color: #1136a5"
+            >
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+                  fill="currentColor"
+                />
+              </svg>
+              How to Use
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+              <div>
+                <h3 class="font-semibold mb-3 text-lg" style="color: #1136a5">
+                  HubSpot
+                </h3>
+                <ol
+                  class="space-y-2 text-sm"
+                  style="
+                    color: #1a1a1a;
+                    list-style-type: decimal;
+                    padding-left: 20px;
+                  "
+                >
+                  <li>Go to <strong>Settings</strong></li>
+                  <li>Select <strong>General</strong></li>
+                  <li>Click <strong>Email</strong></li>
+                  <li>Click <strong>Manage email signatures</strong></li>
+                  <li>Click the <strong>HTML</strong> icon</li>
+                  <li>Paste the copied HTML</li>
+                  <li>Uncheck <strong>Include unsubscribe link</strong></li>
+                  <li>Save changes</li>
+                </ol>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-3 text-lg" style="color: #1136a5">
+                  Outlook (Web)
+                </h3>
+                <ol
+                  class="space-y-2 text-sm"
+                  style="
+                    color: #1a1a1a;
+                    list-style-type: decimal;
+                    padding-left: 20px;
+                  "
+                >
+                  <li>Download the generated <strong>HTML file</strong></li>
+                  <li>Open the file in a <strong>web browser</strong></li>
+                  <li>
+                    Select the signature <strong>(Ctrl + A)</strong> and copy it
+                  </li>
+                  <li>
+                    Open
+                    <strong
+                      >Outlook → Settings → Account → Signatures → Add Signature
+                    </strong>
+                  </li>
+                  <li>Add a signature name</li>
+                  <li>Paste into Email signature</li>
+                  <li>Click Save</li>
+                </ol>
+              </div>
+              <div
+                class="p-4 rounded-lg"
+                style="
+                  background-color: rgba(112, 210, 219, 0.1);
+                  border: 1px solid #70d2db;
+                  height: fit-content;
+                "
+              >
+                <h3 class="font-semibold mb-3 text-lg" style="color: #1136a5">
+                  💡 Quick Tips
+                </h3>
+                <ul
+                  class="space-y-2 text-sm"
+                  style="color: #1a1a1a; padding-left: 20px"
+                >
+                  <li>
+                    <strong>HubSpot:</strong> Use "Copy HTML" for the easiest
+                    setup
+                  </li>
+                  <li>
+                    <strong>Outlook:</strong> Download and open in browser first
+                  </li>
+                  <li>
+                    Your signature will display professionally across all email
+                    clients
+                  </li>
+                  <li>Test by sending a test email to yourself</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="max-w-6xl mx-auto mt-12 pt-8 border-t-2" style="border-color: #70d2db">
+          <div class="text-center text-sm" style="color: #1a1a1a">
+            <p class="mb-2">
+              © 2026 <strong>Meridian International Sourcing Group</strong>. All rights reserved.
+            </p>
+            <p class="text-slate-500">
+              Email Signature Generator | <a href="https://www.migexport.com/" target="_blank" rel="noopener noreferrer" style="color: #1136a5; text-decoration: none;">www.migexport.com</a>
+            </p>
+          </div>
+        </footer>
+        
+        <!-- Toast Notification -->
+        <div
+          id="toast"
+          class="fixed bottom-6 left-1/2 -translate-x-1/2 px-6 py-3 text-white rounded-xl font-medium shadow-lg hidden copy-toast"
+          style="background-color: #70d2db"
+        >
+          ✓ Copied to clipboard!
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

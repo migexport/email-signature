@@ -1,0 +1,47 @@
+body {
+  box-sizing: border-box;
+}
+* {
+  font-family: "DM Sans", sans-serif;
+}
+.signature-preview table {
+  border-collapse: collapse;
+}
+.copy-toast {
+  animation: slideUp 0.3s ease-out, fadeOut 0.3s ease-in 1.7s forwards;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(17, 54, 165, 0.2);
+}
+.code-viewer {
+  background: #1e293b;
+  color: #e2e8f0;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  max-height: 200px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
