@@ -3,7 +3,7 @@ const BRAND = {
   company: "Meridian Intl Sourcing Group",
   websiteText: "www.migexport.com",
   websiteUrl: "https://www.migexport.com/",
-  address: "90 Broad Street, 2nd FL, New York, NY 10040",
+  address: "90 Broad Street, 2nd FL, New York, NY 10004",
   logoUrl:
     "https://48430198.fs1.hubspotusercontent-na1.net/hubfs/48430198/Meridian-International-Sourcing-Group-logo-final-file-2.jpg",
   linkedinUrl:
