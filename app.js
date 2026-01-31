@@ -3,7 +3,7 @@ const BRAND = {
   company: "Meridian Intl Sourcing Group",
   websiteText: "www.migexport.com",
   websiteUrl: "https://www.migexport.com/",
-  address: "90 Broad Street, 2nd FL, New York, NY 10038",
+  address: "90 Broad Street, 2nd FL, New York, NY 10040",
   logoUrl:
     "https://48430198.fs1.hubspotusercontent-na1.net/hubfs/48430198/Meridian-International-Sourcing-Group-logo-final-file-2.jpg",
   linkedinUrl:
@@ -17,7 +17,7 @@ const BRAND = {
 const DEFAULTS = {
   fullName: "John Doe",
   title: "Account Manager",
-  phone: "1234-567-890",
+  phone: "+1 1234-567-890",
   email: "employee@migexport.com",
   whatsappUrl: "https://wa.me/1234567890",
   meetingUrl: "",
@@ -143,9 +143,9 @@ function buildSignatureHtml(user) {
   // Hide Meeting link if empty
   const meetingRow = values.meetingUrl
     ? `
-      <div style="font-family:Garamond,Georgia,serif;font-size:11pt;color:#000;">
+      <div style="font-family:'Lucida Sans Unicode';font-size:14px;color:#000;">
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a target="_blank" rel="noopener noreferrer" href="${meetingHref}" title="Book a meeting">Book A Meeting</a>
+        <a style="color:#000;text-decoration:none;" target="_blank" rel="noopener noreferrer" href="${meetingHref}" title="Book a meeting">Book A Meeting</a>
       </div>
     `
     : `<div style="font-family:'Lucida Sans Unicode';font-size:12px;color:#000;"><br /></div>`;
@@ -249,7 +249,7 @@ function buildSignatureHtml(user) {
                       </td>
                       <td style="color:#000;width:264.719px;height:20px;">
                         <div style="font-family:'Lucida Sans Unicode';font-size:14px;color:#000;">
-                          <a style="color:#000;text-decoration:none;" target="_blank" rel="noopener noreferrer" href="${websiteHref}" title="Website">${v.websiteText}</a>
+                          <a style="color:#000;text-decoration:none;" title="${websiteHref}" data-auth="NotApplicable" rel="noopener noreferrer" target="_blank" href="${websiteHref}" data-ogsc="black" data-linkindex="4">${v.websiteText}</a>
                         </div>
                       </td>
                     </tr>
@@ -262,7 +262,9 @@ function buildSignatureHtml(user) {
                         </div>
                       </td>
                       <td style="color:#000;width:264.719px;height:20px;">
-                        <div style="font-family:'Lucida Sans Unicode';font-size:14px;color:#000;">${v.address}</div>
+                        <div style="font-family:'Lucida Sans Unicode';font-size:14px;color:#000;">
+                          <a style="color:#000;text-decoration:none;" title="Address">${v.address}</a>
+                        </div>
                       </td>
                     </tr>
                   </tbody>
